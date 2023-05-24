@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="@dimen/_6sdp"
+    android:gravity="center"
+    android:layout_marginTop="@dimen/_6sdp"
+    app:cardCornerRadius="@dimen/_10sdp"
+    android:layout_marginBottom="@dimen/_2sdp"
+    android:layout_marginEnd="@dimen/_2sdp"
+    android:padding="@dimen/_2sdp"
+    android:layout_height="wrap_content">
+
+
+    <!--    #16000000-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/_110sdp"
+        android:layout_height="@dimen/_140sdp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/popularback"
+
+        >
+
+        <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_90sdp"
+            android:id="@+id/foodimg"
+            android:scaleType="centerCrop"
+            android:src="@drawable/download"
+            />
+
+
+        <TextView
+            app:layout_constraintTop_toBottomOf="@id/foodimg"
+            app:layout_constraintStart_toStartOf="parent"
+            android:maxLines="3"
+            android:id="@+id/foodname"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="wrap_content"
+            android:text="Burger special in town"
+            android:textColor="@color/txt"
+            android:paddingStart="@dimen/_2sdp"
+            android:paddingEnd="@dimen/_2sdp"
+            android:paddingTop="@dimen/_2sdp"
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="bold"
+            />
+
+
+
+        <TextView
+            app:layout_constraintTop_toBottomOf="@id/foodimg"
+            app:layout_constraintStart_toEndOf="@id/foodname"
+            android:maxLines="3"
+            android:id="@+id/foodPrice"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="wrap_content"
+            android:text="$100"
+            android:textColor="@color/white"
+            android:paddingStart="@dimen/_2sdp"
+            android:paddingEnd="@dimen/_2sdp"
+            android:paddingTop="@dimen/_2sdp"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            />
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

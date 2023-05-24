@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.HomeFragment">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <!--        Toolbar............-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal"
+        android:background="@color/pink"
+        android:id="@+id/tool"
+        >
+
+
+
+        <ImageView
+            android:id="@+id/icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:src="@drawable/dessert"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_10sdp"
+            />
+
+
+        <TextView
+            android:id="@+id/appname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:fontFamily="@font/abril_fatface"
+            android:gravity="center"
+            android:text="Foody"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_22sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+    <ScrollView
+        app:layout_constraintTop_toBottomOf="@id/tool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/slidercard"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_90sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_6ssp"
+            android:layout_marginBottom="@dimen/_8ssp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:foregroundGravity="center"
+            app:cardBackgroundColor="@color/pink"
+            >
+
+
+
+
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/imgSlider"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                app:iss_auto_cycle="true"
+                app:iss_period="2000"
+                android:gravity="center"
+                android:textAlignment="center"
+                app:iss_placeholder="@drawable/burger"
+                app:iss_error_image="@drawable/pizza" />
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            app:layout_constraintTop_toBottomOf="@id/slidercard"
+            android:layout_weight="1"
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_32sdp"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/pink"
+            android:drawableStart="@android:drawable/ic_menu_search"
+            android:padding="@dimen/_6sdp"
+            android:hint="Search for Foods"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/searchbg"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:paddingBottom="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp"
+
+            />
+
+
+
+        <TextView
+            app:layout_constraintTop_toBottomOf="@id/search"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_weight="1"
+            android:id="@+id/txt"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_32sdp"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="Cetagory"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp"
+
+            />
+
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            app:layout_constraintTop_toBottomOf="@id/txt"
+            android:id="@+id/cetagoryRecycler"
+            android:layout_marginStart="@dimen/_8ssp"
+            android:layout_marginEnd="@dimen/_8ssp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:spanCount="2"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            tools:listitem="@layout/cetagorydesign"/>
+
+
+
+
+
+
+        <TextView
+            app:layout_constraintTop_toBottomOf="@id/cetagoryRecycler"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/txt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="Popular in Your City"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp"
+
+            />
+
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            app:layout_constraintTop_toBottomOf="@id/txt2"
+            android:id="@+id/popularRecycler"
+            android:layout_marginStart="@dimen/_8ssp"
+            android:layout_marginEnd="@dimen/_8ssp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            tools:listitem="@layout/popularfooddesign"/>
+
+
+
+
+
+
+
+        <TextView
+            app:layout_constraintTop_toBottomOf="@id/popularRecycler"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/txt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="All Foods"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp"
+
+            />
+
+
+
+
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            app:layout_constraintTop_toBottomOf="@id/txt3"
+            android:id="@+id/allfoodRecycler"
+            android:layout_marginStart="@dimen/_8ssp"
+            android:layout_marginEnd="@dimen/_8ssp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/allfooddesign"/>
+
+
+
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+          </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

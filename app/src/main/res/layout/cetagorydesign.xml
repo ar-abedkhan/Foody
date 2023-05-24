@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="@dimen/_6sdp"
+    android:gravity="center"
+    android:layout_marginTop="@dimen/_6sdp"
+    android:layout_marginBottom="@dimen/_2sdp"
+    android:layout_marginEnd="@dimen/_2sdp"
+    android:padding="@dimen/_2sdp"
+    android:background="@drawable/lightback"
+    android:layout_height="wrap_content">
+
+
+    <!--    #16000000-->
+
+    <LinearLayout
+        android:layout_width="@dimen/_65sdp"
+        android:layout_height="@dimen/_65sdp"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:id="@+id/catImg"
+            android:src="@drawable/burger"
+            app:civ_border_width="@dimen/_1sdp"
+            app:civ_border_color="@color/sky"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingBottom="@dimen/_2sdp"
+            />
+
+
+        <TextView
+            android:id="@+id/catName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Burger"
+            android:textAlignment="center"
+            android:textColor="@color/txt"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
